@@ -19,6 +19,21 @@ spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 # King of Spades
 # Ace of Spades
 
+for my_card_clubs in clubs
+    puts "#{my_card_clubs} of clubs"
+end
+for my_card_diamonds in diamonds
+    puts "#{my_card_diamonds} of diamonds"
+end
+for my_card_hearts in hearts
+    puts "#{my_card_hearts} of hearts"
+end
+for my_card_spades in spades
+    puts "#{my_card_spades} of spades"
+end
+
+
+
 # CHALLENGE #1
 # The arrays are identical for each suit and can be simplified by using
 # a ranks array as seen below. Try to complete the exercise again by
