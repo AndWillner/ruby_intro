@@ -19,19 +19,25 @@ spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 # King of Spades
 # Ace of Spades
 
-for my_card_clubs in clubs
-    puts "#{my_card_clubs} of clubs"
-end
-for my_card_diamonds in diamonds
-    puts "#{my_card_diamonds} of diamonds"
-end
-for my_card_hearts in hearts
-    puts "#{my_card_hearts} of hearts"
-end
-for my_card_spades in spades
-    puts "#{my_card_spades} of spades"
-end
+#for my_card_clubs in clubs
+#    puts "#{my_card_clubs} of clubs"
+#end
+#for my_card_diamonds in diamonds
+#    puts "#{my_card_diamonds} of diamonds"
+#end
+#for my_card_hearts in hearts
+#    puts "#{my_card_hearts} of hearts"
+#end
+#for my_card_spades in spades
+#    puts "#{my_card_spades} of spades"
+#end
 
+for rank in clubs
+    puts "#{rank} of Clubs"
+    puts "#{rank} of Diamonds"
+    puts "#{rank} of Hearts"
+    puts "#{rank} of Spades"
+end
 
 
 # CHALLENGE #1
@@ -41,6 +47,33 @@ end
 ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 
+for rank in ranks
+    for suit in suits
+        puts "#{rank} of #{suit}"
+    end
+end
+
+
+
 # CHALLENGE #2
 # Deal a poker hand. Shuffle the deck and "deal" (i.e. display) a 5 card hand (i.e. 5 cards from the deck).
 # You will want to look at the documentation for Arrays: https://ruby-doc.org/core-2.7.0/Array.html
+
+deck = []
+
+for rank in ranks
+    for suit in suits
+        card = "#{rank} of #{suit}"
+        deck.push(card)
+    end
+end
+
+p deck
+
+shuffled_deck = deck.shuffle
+
+hand = shuffled_deck[0,5]
+
+for card in hand
+    puts card
+end
